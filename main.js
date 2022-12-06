@@ -38,8 +38,29 @@ for (let i = 0; i < users.length; i++) {
        }
   }
 
+  
+const card = document.getElementById("card");
 
   for (let i = 0; i < users.length; i++) {
     const person = users[i];
-    
+     
+    const userImg = `
+    <div id="card-img" class="card-img">
+      <img src="${users.img}" alt="">
+    </div>`;
+
+    const userName = ` 
+    div id="name">
+      <h3>Name</h3>
+      <p id="nome">${users.name}</p>
+    </div>
+    `;
+
+    const userPosition = `
+    <div id="position">
+       <h3>Ruolo</h3>
+       <p id="ruolo">${users.position}</p>
+    </div>
+    `;
     }
+
