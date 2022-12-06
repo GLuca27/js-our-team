@@ -31,13 +31,15 @@ const users = [
       }
 ]
 
-console.log(users)
-
-document.getElementById("card-img").innerHTML = img;
-document.getElementById("nome").innerHTML = name;
-document.getElementById("ruolo").innerHTML = position;
-
 for (let i = 0; i < users.length; i++) {
-       users[i];
+       const person = users[i];
+       for (let key in person){
+        console.log(person[key])
+       }
   }
 
+
+  for (let i = 0; i < users.length; i++) {
+    const person = users[i];
+    
+    }
