@@ -39,28 +39,16 @@ for (let i = 0; i < users.length; i++) {
   }
 
   
-const card = document.getElementById("card");
+const container = document.getElementById('card-container');
 
-  for (let i = 0; i < users.length; i++) {
-    const person = users[i];
-     
-    const userImg = `
-    <div id="card-img" class="card-img">
-      <img src="${users.img}" alt="">
-    </div>`;
+for (let i = 0; i < users.length; i++){
+    const user = users[i];
+    const template = document.getElementById('template').content.cloneNode(true);
 
-    const userName = ` 
-    div id="name">
-      <h3>Name</h3>
-      <p id="nome">${users.name}</p>
-    </div>
-    `;
+    template.querySelector('#cardimg').src = user.img;
+    template.querySelector('#nome').innerHTML = user.name;
+    template.querySelector('#ruolo').innerHTML = user.position;
 
-    const userPosition = `
-    <div id="position">
-       <h3>Ruolo</h3>
-       <p id="ruolo">${users.position}</p>
-    </div>
-    `;
-    }
+    container.append(template);
+}
 
